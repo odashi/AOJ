@@ -23,7 +23,7 @@ int step2(char dest, int n) {
 
 int main() {
 	int n, m;
-	while (cin >> n >> m, n && m) {
+	while (cin >> n >> m, n||m) {
 		for (int i = 0; i < 3; i++) {
 			int k; cin >> k;
 			for (int j = 0; j < k; j++) {
