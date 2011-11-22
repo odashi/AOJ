@@ -20,20 +20,10 @@ void turn_right() {
 inline bool ok(char c) { return (c == '1'); }
 
 bool avail() {
-	if (vx == 1) {
-		if (x < 4 && ok(horz[y][x]))
-			return true;
-	} else if (vx == -1) {
-		if (x > 0 && ok(horz[y][x-1]))
-			return true;
-	} else if (vy == 1) {
-		if (y < 4 && ok(vert[y][x]))
-			return true;
-	} else /* if (vy == -1) */ {
-		if (y > 0 && ok(vert[y-1][x]))
-			return true;
-	}
-	return false;
+	if (vx == 1) return (x < 4 && ok(horz[y][x]));
+	if (vx == -1) return (x > 0 && ok(horz[y][x-1]));
+	if (vy == 1) return (y < 4 && ok(vert[y][x]));
+	/* if (vy == -1) */ return (y > 0 && ok(vert[y-1][x]));
 }
 
 void print() {
