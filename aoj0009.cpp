@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 int table[1000000];
 
